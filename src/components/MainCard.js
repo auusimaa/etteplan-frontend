@@ -80,6 +80,7 @@ const Temperature = styled.p`
 
 export default function MainCard(props) {
 
+  // Function to get correct ordial for dates
   const nth = (day) => {
     if (day > 3 && day < 21) return 'th';
     switch (day % 10) {
@@ -105,7 +106,7 @@ export default function MainCard(props) {
     <MainWrapper>
       <TitleWrapper>
         <div>
-          <Title>{props.city}</Title>
+          <Title>{props.city === 'Jyvaskyla' ? 'Jyväskylä' : props.city}</Title>
           <InfoLabel>{props.description}</InfoLabel>
         </div>
         <WeatherWrapper>

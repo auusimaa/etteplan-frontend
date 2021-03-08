@@ -16,9 +16,18 @@ export default function Forecast(props) {
 
   const items = [];
 
+  // Loop through hourlyData and create a card for every 3 hours
   for (let i = 0; i < 15; i += 3) {
-    items.push(<ForecastCard id={`forecast-card-${i}`} time={hourlyData[i].dt} icon={hourlyData[i].weather[0].icon} temp={hourlyData[i].temp} wind={hourlyData[i].wind_speed} humidity={hourlyData[i].humidity} rain={hourlyData[i].rain ? hourlyData[i].rain['1h'] : ''} />)
-  }
+    items.push(<ForecastCard
+      id={`forecast-card-${i}`}
+      time={hourlyData[i].dt}
+      icon={hourlyData[i].weather[0].icon}
+      temp={hourlyData[i].temp}
+      wind={hourlyData[i].wind_speed}
+      humidity={hourlyData[i].humidity}
+      rain={hourlyData[i].weather.rain ? hourlyData[i].weather.rain['1h'] : ''}
+      />)
+  };
 
   return (
     <CardWrapper>
