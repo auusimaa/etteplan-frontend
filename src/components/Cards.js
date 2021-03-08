@@ -12,7 +12,14 @@ const Wrapper = styled.div`
 export default function Cards(props) {
   return (
     <Wrapper id={props.id}>
-      <MainCard city={props.city} icon={props.icon} temp={props.temp} description={props.description} wind={props.wind} humidity={props.humidity} rain={props.rain} />
+      <MainCard
+        city={props.city}
+        icon={props.icon}
+        temp={props.temp}
+        description={props.description}
+        wind={props.wind}
+        humidity={props.humidity}
+        rain={props.rain} />
       <Forecast hourlyData={props.hourlyData} />      
     </Wrapper>
   )

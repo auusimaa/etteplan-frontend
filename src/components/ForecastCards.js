@@ -55,7 +55,7 @@ export default function ForecastCard(props) {
         <StyledP fontSize='13px' >{parseDate(props.time)}</StyledP>
           <img alt={'weather-icon'} src={`http://openweathermap.org/img/w/${props.icon}.png`} ></img>
         <StyledP fontSize='15px' >
-          <span>{Math.round((props.temp - 273.15) * 10) / 10}</span> °C
+          <span>{Math.round((props.temp - 273.15) * 10) / 10}</span>°C
         </StyledP>
       </WeatherWrapper>
       <InfoWrapper>

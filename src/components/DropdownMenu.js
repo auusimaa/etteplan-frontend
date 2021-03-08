@@ -34,6 +34,7 @@ export default function DropdownMenu(props) {
     setDropdown(text);
   };
 
+  // Pass selection to the parent component
   const handleSelect = (e) => {
     props.onSelectionChange(e);
   }
@@ -45,11 +46,21 @@ export default function DropdownMenu(props) {
           {dropdownValue}
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item as="button" eventKey={'All'} ><div onClick={(e) => changeValue(e.target.textContent)}>Kaikki kaupungit</div></Dropdown.Item>
-          <Dropdown.Item as="button" eventKey={'H'} ><div onClick={(e) => changeValue(e.target.textContent)}>Helsinki</div></Dropdown.Item>
-          <Dropdown.Item as="button" eventKey={'J'} ><div onClick={(e) => changeValue(e.target.textContent)}>Jyväskylä</div></Dropdown.Item>
-          <Dropdown.Item as="button" eventKey={'K'} ><div onClick={(e) => changeValue(e.target.textContent)}>Kuopio</div></Dropdown.Item>
-          <Dropdown.Item as="button" eventKey={'T'} ><div onClick={(e) => changeValue(e.target.textContent)}>Tampere</div></Dropdown.Item>
+          <Dropdown.Item as="button" eventKey={'All'} >
+            <div onClick={(e) => changeValue(e.target.textContent)}>Kaikki kaupungit</div>
+            </Dropdown.Item>
+          <Dropdown.Item as="button" eventKey={'H'} >
+            <div onClick={(e) => changeValue(e.target.textContent)}>Helsinki</div>
+            </Dropdown.Item>
+          <Dropdown.Item as="button" eventKey={'J'} >
+            <div onClick={(e) => changeValue(e.target.textContent)}>Jyväskylä</div>
+            </Dropdown.Item>
+          <Dropdown.Item as="button" eventKey={'K'} >
+            <div onClick={(e) => changeValue(e.target.textContent)}>Kuopio</div>
+            </Dropdown.Item>
+          <Dropdown.Item as="button" eventKey={'T'} >
+            <div onClick={(e) => changeValue(e.target.textContent)}>Tampere</div>
+            </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </DropdownContainer>
